@@ -12,10 +12,6 @@ public class FirstHttpServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // Переадресовываем запрос на другой сервлет
-        // делаем include, который вставляет результат серверлета, не полностью переадресует
-        getServletContext().getRequestDispatcher("/page_header").include(req, resp);
-
         resp.getWriter().println("<h1>hello from HttpServlet!</h1> <br> Привет от сервлета");
         resp.getWriter().println("<p>contextPath: " + req.getContextPath() + "</p>");
         resp.getWriter().println("<p>servletPath: " + req.getServletPath() + "</p>");

@@ -15,10 +15,11 @@ public class HeaderServlet extends HttpServlet {
         resp.getWriter().println("<link rel='stylesheet' type='text/css' href='" +req.getContextPath() + "/style.css'>");
 
         resp.getWriter().println("<ul>");
-        resp.getWriter().println("<li><a href='"+ req.getContextPath() + "/first_servlet'>Home</a></li>");
-        resp.getWriter().println("<li><a href='#news'>News</a></li>");
-        resp.getWriter().println("<li><a href='#contacts'>Contacts</a></li>");
-        resp.getWriter().println("<li><a href='#about'>About</a></li>");
+        resp.getWriter().println("<li><a href='"+ req.getContextPath() + "/Main'>Main</a></li>");
+        resp.getWriter().println("<li><a href='"+ req.getContextPath() + "/Catalog'>Catalog</a></li>");
+        resp.getWriter().println("<li><a href='"+ req.getContextPath() + "/Product'>Product</a></li>");
+        resp.getWriter().println("<li><a href='"+ req.getContextPath() + "/Cart'>Cart</a></li>");
+        resp.getWriter().println("<li><a href='"+ req.getContextPath() + "/Order'>Order</a></li>");
         resp.getWriter().println("</ul>");
     }
 }

@@ -19,6 +19,11 @@ public class EncodingFilter implements Filter {
         servletResponse.setContentType("text/html");
         servletResponse.setCharacterEncoding("UTF-8");
 
+        // Переадресовываем запрос на другой сервлет
+        // делаем include, который вставляет результат серверлета, не полностью переадресует
+
+        servletRequest.getServletContext().getRequestDispatcher("/page_header").include(servletRequest, servletResponse);
+
         filterChain.doFilter(servletRequest, servletResponse);
     }
 
